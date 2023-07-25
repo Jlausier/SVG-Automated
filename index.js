@@ -1,4 +1,6 @@
 const inquirer = require('inquirer');
+const fs = require('fs');
+const path = require('path');
 const { Circle, Triangle, Square } = require('./lib/shapes');
 
 async function generateLogo() {
@@ -12,7 +14,7 @@ async function generateLogo() {
       {
         type: 'input',
         name: 'textColor',
-        message: 'Enter the text color (keyword or hexadecimal number):',
+        message: 'Enter the text color (keyword):',
       },
       {
         type: 'list',
@@ -23,20 +25,20 @@ async function generateLogo() {
       {
         type: 'input',
         name: 'shapeColor',
-        message: 'Enter the shape color (keyword or hexadecimal number):',
+        message: 'Enter the shape color (keyword):',
       },
     ]);
 
     let shape;
     switch (userInput.shape) {
       case 'circle':
-        shape = new Circle(userInput.shapeColor);
+        shape = new Circle(userInput.shapeColor, userInput.textColor, userInput.text);
         break;
       case 'triangle':
-        shape = new Triangle(userInput.shapeColor);
+        shape = new Triangle(userInput.shapeColor, userInput.textColor, userInput.text);
         break;
       case 'square':
-        shape = new Square(userInput.shapeColor);
+        shape = new Square(userInput.shapeColor, userInput.textColor, userInput.text);
         break;
     }
 
