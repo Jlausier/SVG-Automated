@@ -21,8 +21,9 @@ This project is licensed under the [MIT](https://opensource.org/licenses/MIT) Li
   ## Usage
   run node index.js to generate a logo. 
 
-  https://drive.google.com/file/d/1JPqZMXkK7mCB7QvjPrp0JDuLeNnKdJzz/view
+  https://drive.google.com/file/d/1vxS1oaUSKdmE7Tzs0b-dnqFjDB8UflDI/view
   
+
   
   ## Contributing
   No specific contribution guidlines at the moment.
